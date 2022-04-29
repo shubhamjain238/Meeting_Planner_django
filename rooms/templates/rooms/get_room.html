@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Room {{ get_room.name }}</title>
+{% endblock title %}
+{% block content %}
+    <h1>Room name is {{ get_room.name }}, Room number is {{ get_room.room_no }}, Floor is {{ get_room.floor }}</h1>
+{% endblock content %}

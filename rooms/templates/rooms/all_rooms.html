@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>All Rooms</title>
+{% endblock title %}
+{% block content %}
+    <ul>
+        {% for room in rooms %}
+            <li>
+                <a href="{% url 'get_room' room.name %}">{{ room.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

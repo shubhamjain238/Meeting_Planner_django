@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Home Page</title>
+{% endblock title %}
+{% block content %}
+    <h1>Welcome to the Meeting Planner Page</h1>
+    <p>There are total {{ num_meetings }} scheduled meetings</p>
+    <table>
+        <ul>
+            {% for meeting in meetings %}
+                <li><a href="{% url 'get_meeting' meeting.title %}">{{ meeting.title }}</a> </li>
+            {% endfor %}
+        </ul>
+    </table>
+{% endblock content %}
